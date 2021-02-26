@@ -1,0 +1,48 @@
+p-oleg@VM-WORK-05:~/2$ mkdir hw2_2
+p-oleg@VM-WORK-05:~/2$ cd hw2_2
+p-oleg@VM-WORK-05:~/2/hw2_2$ git init
+Initialized empty Git repository in /home/p-oleg/2/hw2_2/.git/
+p-oleg@VM-WORK-05:~/2/hw2_2$ touch 1.txt
+p-oleg@VM-WORK-05:~/2/hw2_2$ git add 1.txt
+p-oleg@VM-WORK-05:~/2/hw2_2$ git commit -m "initial commit"
+[master (root-commit) 85eb26e] initial commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 1.txt
+p-oleg@VM-WORK-05:~/2/hw2_2$ vim 1.txt
+p-oleg@VM-WORK-05:~/2/hw2_2$ git add 1.txt
+p-oleg@VM-WORK-05:~/2/hw2_2$ git commit -m "working peace of code"
+[master d55d736] working peace of code
+ 1 file changed, 2 insertions(+)
+p-oleg@VM-WORK-05:~/2/hw2_2$ vim 1.txt
+p-oleg@VM-WORK-05:~/2/hw2_2$ git add 1.txt
+p-oleg@VM-WORK-05:~/2/hw2_2$ git commit -m "Ready for release :glasses:"
+[master ea5578b] Ready for release :glasses:
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+p-oleg@VM-WORK-05:~/2/hw2_2$ git log --oneline --all
+ea5578b (HEAD -> master) Ready for release :glasses:
+d55d736 working peace of code
+85eb26e initial commit
+p-oleg@VM-WORK-05:~/2/hw2_2$ git checkout @^
+Note: switching to '@^'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at d55d736 working peace of code
+p-oleg@VM-WORK-05:~/2/hw2_2$ git log --oneline --all
+ea5578b (master) Ready for release :glasses:
+d55d736 (HEAD) working peace of code
+85eb26e initial commit
+
